@@ -96,7 +96,7 @@ export default function Home() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    window.location.href = `mailto:info@testx.sk?subject=Consultation Request from ${formData.name}&body=${formData.message}`
+    window.location.href = `mailto:testx.skuci@gmail.com?subject=Consultation Request from ${formData.name}&body=${formData.message}`
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -207,7 +207,7 @@ export default function Home() {
                 {t.hero.title}
               </h1>
               <p className={`text-lg ${secondaryTextClass} mb-8 text-balance leading-relaxed`}>{t.hero.description}</p>
-              <Link href="mailto:info@testx.sk">
+              <Link href="mailto:testx.skuci@gmail.com">
                 <Button className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold px-8 py-3 text-base">
                   {t.hero.cta}
                 </Button>
@@ -374,8 +374,8 @@ export default function Home() {
                   </a>
                 </p>
                 <p>
-                  <a href="mailto:info@testx.sk" className="hover:text-cyan-600 transition">
-                    info@testx.sk
+                  <a href="mailto:testx.skuci@gmail.com" className="hover:text-cyan-600 transition">
+                    testx.skuci@gmail.com
                   </a>
                 </p>
               </div>
