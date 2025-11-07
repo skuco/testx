@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTX | Professional QA Consulting & Software Testing</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Professional QA consulting and automated testing services. Optimize your testing processes with Playwright, Cypress, K6, Selenium and more.">
+    <meta name="keywords" content="QA consulting, software testing, automation, Playwright, Cypress, K6, Selenium, quality assurance">
+    <meta name="author" content="TESTX s.r.o.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://testx.sk">
+    <meta property="og:title" content="TESTX | Professional QA Consulting & Software Testing">
+    <meta property="og:description" content="Professional QA consulting and automated testing services. Optimize your testing processes with modern testing tools.">
+    <meta property="og:image" content="https://testx.sk/images/og-image.jpg">
+    
+    <!-- Twitter Meta -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://testx.sk">
+    <meta property="twitter:title" content="TESTX | Professional QA Consulting & Software Testing">
+    <meta property="twitter:description" content="Professional QA consulting and automated testing services. Optimize your testing processes with modern testing tools.">
+    <meta property="twitter:image" content="https://testx.sk/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/icon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-light-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-dark-32x32.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="/apple-icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur border-b border-zinc-200 dark:border-zinc-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-cyan-500 relative">
+                        <div class="absolute inset-1 bg-white dark:bg-zinc-950"></div>
+                    </div>
+                    <span class="text-lg font-bold tracking-tight">TESTX</span>
+                </div>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#services" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-cyan-600 transition duration-300" data-translate="nav.services">Services</a>
+                    <a href="#tech" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-cyan-600 transition duration-300" data-translate="nav.technology">Technology</a>
+                    <a href="#contact" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-cyan-600 transition duration-300" data-translate="nav.contact">Contact</a>
+                    <a href="#about" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-cyan-600 transition duration-300" data-translate="nav.about">About</a>
+
+                    <button id="theme-toggle" class="p-2 rounded border border-zinc-200 dark:border-zinc-800 hover:text-cyan-600 transition duration-300" aria-label="Toggle theme">
+                        <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+                        <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+                    </button>
+
+                    <button id="language-toggle" class="text-xs font-semibold px-3 py-2 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-600 rounded transition duration-300">
+                        SK
+                    </button>
+                </div>
+
+                <!-- Mobile theme and language switcher -->
+                <div class="md:hidden flex items-center gap-2">
+                    <button id="mobile-theme-toggle" class="p-2 rounded border border-zinc-200 dark:border-zinc-800 hover:text-cyan-600 transition duration-300" aria-label="Toggle theme">
+                        <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+                        <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-language-toggle" class="text-xs font-semibold px-2 py-1 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-600 rounded transition duration-300">
+                        SK
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-24 md:py-32 border-b border-zinc-200 dark:border-zinc-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-balance leading-tight" data-translate="hero.title">
+                        Software quality begins with thorough testing.
+                    </h1>
+                    <p class="text-lg text-zinc-600 dark:text-zinc-400 mb-8 text-balance leading-relaxed" data-translate="hero.description">
+                        We specialize in QA consulting and automated testing. Help optimize your testing processes, increase efficiency and support the growth of your QA team.
+                    </p>
+                    <a href="mailto:testx.skuci@gmail.com" class="btn-primary">
+                        <span data-translate="hero.cta">Consult Now</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center justify-center">
+                    <div class="w-full aspect-square bg-gradient-to-br from-cyan-100 to-blue-100 dark:from-cyan-900 dark:to-blue-900 border border-cyan-200 dark:border-cyan-800 rounded-2xl flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-6xl mb-4 text-cyan-600">&lt;/</div>
+                            <p class="text-zinc-600 dark:text-zinc-400 font-mono text-sm">QA Testing Platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 border-b border-zinc-200 dark:border-zinc-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight" data-translate="services.title">Our Services</h2>
+            <p class="text-zinc-600 dark:text-zinc-400 mb-16 text-balance max-w-2xl" data-translate="services.description">
+                We offer top-notch IT advice and consulting focused on QA and software testing.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="service-card group p-8 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
+                    <div class="w-12 h-12 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-translate="services.items.0.title">Quality Software Testing</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed" data-translate="services.items.0.desc">
+                        We provide comprehensive solutions for quality software testing. We design testing procedures for both manual testing and automation, customized to the needs of small and large projects.
+                    </p>
+                </div>
+
+                <div class="service-card group p-8 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
+                    <div class="w-12 h-12 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="lightbulb" class="w-8 h-8 text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-translate="services.items.1.title">Testing Strategies</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed" data-translate="services.items.1.desc">
+                        We design effective testing strategies aimed at optimizing software development. We use our experience with modern tools such as Playwright, Cypress, K6 and others to ensure reliability, performance and quality of your applications.
+                    </p>
+                </div>
+
+                <div class="service-card group p-8 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
+                    <div class="w-12 h-12 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="book-open" class="w-8 h-8 text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-translate="services.items.2.title">Testing & Automation Training</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed" data-translate="services.items.2.desc">
+                        We offer technical and general training in the field of software testing and automation. We provide training individually or in groups, tailored to your specific needs.
+                    </p>
+                </div>
+
+                <div class="service-card group p-8 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
+                    <div class="w-12 h-12 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="message-square" class="w-8 h-8 text-cyan-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-translate="services.items.3.title">QA Consulting</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed" data-translate="services.items.3.desc">
+                        We offer expert consulting aimed at improving software quality and testing process efficiency. We help identify weaknesses, optimize procedures and implement proven strategies to achieve higher reliability and performance of your applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="py-24 border-b border-zinc-200 dark:border-zinc-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight" data-translate="tech.title">Our Tech Stack</h2>
+            <p class="text-zinc-600 dark:text-zinc-400 mb-16 text-balance max-w-2xl" data-translate="tech.description">
+                We have extensive experience testing projects from various fields such as e-commerce, insurance, banking, industry, automotive and others.
+            </p>
+
+            <div class="flex justify-center">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 w-full max-w-4xl">
+                    <a href="https://playwright.dev" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center p-8 md:p-12 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 rounded-lg bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition duration-300 group min-h-64">
+                        <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
+                            <img src="https://cdn.brandfetch.io/idpyc8TcWP/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1759069014905" alt="Playwright" class="w-40 h-40 object-contain filter brightness-110 hover:brightness-125 transition duration-300 playwright-logo">
+                        </div>
+                    </a>
+
+                    <a href="https://www.cypress.io" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center p-8 md:p-12 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 rounded-lg bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition duration-300 group min-h-64">
+                        <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
+                            <img src="https://cdn.brandfetch.io/idIq_kF0rb/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667565307270" alt="Cypress" class="w-40 h-40 object-contain filter brightness-110 hover:brightness-125 transition duration-300 cypress-logo">
+                        </div>
+                    </a>
+
+                    <a href="https://k6.io" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center p-8 md:p-12 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 rounded-lg bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition duration-300 group min-h-64">
+                        <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
+                            <img src="https://cdn.brandfetch.io/idI__V61tX/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1756019727212" alt="K6" class="w-40 h-40 object-contain filter brightness-110 hover:brightness-125 transition duration-300 k6-logo">
+                        </div>
+                    </a>
+
+                    <a href="https://www.selenium.dev" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center p-8 md:p-12 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 rounded-lg bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition duration-300 group min-h-64">
+                        <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
+                            <img src="https://cdn.brandfetch.io/id3uyOwT-S/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1759268542965" alt="Selenium" class="w-40 h-40 object-contain filter brightness-110 hover:brightness-125 transition duration-300 selenium-logo">
+                        </div>
+                    </a>
+
+                    <a href="https://robotframework.org" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center p-8 md:p-12 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 rounded-lg bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition duration-300 group min-h-64">
+                        <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
+                            <img src="https://testautomationtools.dev/wp-content/uploads/2023/03/robot-framework-logo-square.png" alt="Robot Framework" class="w-40 h-40 object-contain filter brightness-110 hover:brightness-125 transition duration-300 robot-logo">
+                        </div>
+                    </a>
+
+                    <a href="https://jmeter.apache.org" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center p-8 md:p-12 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 rounded-lg bg-white dark:bg-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition duration-300 group min-h-64">
+                        <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Apache_JMeter.png" alt="JMeter" class="w-40 h-40 object-contain filter brightness-110 hover:brightness-125 transition duration-300 jmeter-logo">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 border-b border-zinc-200 dark:border-zinc-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight" data-translate="contact.title">Order IT Consulting Today</h2>
+            <p class="text-zinc-600 dark:text-zinc-400 mb-16 text-balance max-w-2xl" data-translate="contact.description">
+                Book an individual consultation regarding QA and software testing and drive your business to perfection.
+            </p>
+
+            <div class="max-w-xl">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-semibold mb-3" data-translate="contact.name">Name</label>
+                        <input id="name" name="name" type="text" required 
+                               class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 hover:border-cyan-400 focus:border-cyan-600 focus:outline-none transition duration-300 rounded" 
+                               data-translate-placeholder="contact.namePlaceholder" placeholder="Your name">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-semibold mb-3" data-translate="contact.email">Email</label>
+                        <input id="email" name="email" type="email" required 
+                               class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 hover:border-cyan-400 focus:border-cyan-600 focus:outline-none transition duration-300 rounded" 
+                               data-translate-placeholder="contact.emailPlaceholder" placeholder="your@email.com">
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-semibold mb-3" data-translate="contact.message">Message</label>
+                        <textarea id="message" name="message" required rows="5" 
+                                  class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 hover:border-cyan-400 focus:border-cyan-600 focus:outline-none transition duration-300 rounded resize-none" 
+                                  data-translate-placeholder="contact.messagePlaceholder" placeholder="Tell us about your project..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary w-full">
+                        <span data-translate="contact.send">Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about" class="bg-zinc-100 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider mb-6 text-zinc-700 dark:text-zinc-300" data-translate="footer.contactTitle">Contact</h3>
+                    <div class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <p data-translate="footer.address">Na Dielnici 953/23</p>
+                        <p data-translate="footer.city">976 32 Badín, Slovakia</p>
+                        <p>
+                            <a href="tel:+421949184534" class="hover:text-cyan-600 transition">+421 949 184 534</a>
+                        </p>
+                        <p>
+                            <a href="mailto:testx.skuci@gmail.com" class="hover:text-cyan-600 transition">testx.skuci@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider mb-6 text-zinc-700 dark:text-zinc-300" data-translate="footer.aboutTitle">About</h3>
+                    <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed" data-translate="footer.aboutText">
+                        I am the founder and owner of TestX s.r.o., a company specializing in QA automation, testing and consulting. I have extensive experience with test development in modern tools, focusing on web application testing and data validation.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider mb-6 text-zinc-700 dark:text-zinc-300" data-translate="footer.hoursTitle">Hours</h3>
+                    <div class="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+                        <p data-translate="footer.mondayFriday">Monday - Friday: 9:00 - 17:00</p>
+                        <p data-translate="footer.weekend">Saturday - Sunday: Closed</p>
+                        <p data-translate="footer.available">Available by request outside hours.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-zinc-200 dark:border-zinc-800 pt-8 text-center text-sm text-zinc-600 dark:text-zinc-400">
+                <p data-translate="footer.copyright">© 2025 TESTX s.r.o. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/script.js"></script>
+</body>
+</html>
