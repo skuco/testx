@@ -1,0 +1,19 @@
+<svg width="450" height="580" viewBox="0 0 450 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Yellow rectangle at top -->
+  <rect x="150" y="0" width="150" height="150" fill="#F1C40F"/>
+  
+  <!-- Green circle on left -->
+  <circle cx="75" cy="225" r="75" fill="#2ECC71"/>
+  
+  <!-- Green rectangle in center -->
+  <rect x="150" y="150" width="300" height="150" fill="#2ECC71"/>
+  
+  <!-- Blue rectangle in center -->
+  <rect x="150" y="300" width="150" height="150" fill="#3498DB"/>
+  
+  <!-- Purple rounded corner bottom left -->
+  <path d="M150 450 L150 580 C83.056 580 30 526.944 30 460 C30 439.909 32.3904 420.218 36.9225 401.35 L100.777 422.65 C98.9224 431.733 98 441.215 98 451 C98 481.376 122.624 506 153 506 L153 450 H150 Z" fill="#9B59B6"/>
+  
+  <!-- Magenta circle bottom right -->
+  <circle cx="375" cy="505" r="75" fill="#E91E63"/>
+</svg>

@@ -190,6 +190,16 @@ nav .flex {
     background-color: var(--bg-primary);
 }
 
+/* Header logo styling */
+nav img {
+    filter: none;
+    transition: opacity 0.3s ease;
+}
+
+nav img:hover {
+    opacity: 0.8;
+}
+
 /* Links */
 a {
     color: inherit;
@@ -287,6 +297,7 @@ section {
     background-color: var(--card-bg);
     border: 1px solid var(--border-primary);
     transition: all 0.3s ease;
+    padding: 2rem;
 }
 
 .service-card:hover {
@@ -300,6 +311,16 @@ section {
 
 .service-card:hover .group-hover\:scale-110 {
     transform: scale(1.1);
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.service-card p {
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
 /* Tech cards */

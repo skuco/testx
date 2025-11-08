@@ -25,10 +25,9 @@
     <meta property="twitter:image" content="https://testx.sk/images/og-image.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/icon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icon-light-32x32.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icon-dark-32x32.png" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" href="/apple-icon.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/testx-logo.svg">
+    <link rel="apple-touch-icon" href="/testx-logo.svg">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,9 +46,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-cyan-500 relative">
-                        <div class="absolute inset-1 bg-white dark:bg-zinc-950"></div>
-                    </div>
+                    <img src="/testx-logo.svg" alt="TESTX Logo" class="w-8 h-8 object-contain">
                     <span class="text-lg font-bold tracking-tight">TESTX</span>
                 </div>
 
@@ -119,41 +116,41 @@
             </p>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="service-card group p-8 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
+                <div class="service-card group border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
                     <div class="w-12 h-12 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
                         <i data-lucide="check-circle-2" class="w-8 h-8 text-cyan-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3" data-translate="services.items.0.title">Quality Software Testing</h3>
+                    <h3 class="text-xl font-bold" data-translate="services.items.0.title">Quality Software Testing</h3>
                     <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed" data-translate="services.items.0.desc">
                         We provide comprehensive solutions for quality software testing. We design testing procedures for both manual testing and automation, customized to the needs of small and large projects.
                     </p>
                 </div>
 
-                <div class="service-card group p-8 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
+                <div class="service-card group border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
                     <div class="w-12 h-12 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
                         <i data-lucide="lightbulb" class="w-8 h-8 text-cyan-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3" data-translate="services.items.1.title">Testing Strategies</h3>
+                    <h3 class="text-xl font-bold" data-translate="services.items.1.title">Testing Strategies</h3>
                     <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed" data-translate="services.items.1.desc">
                         We design effective testing strategies aimed at optimizing software development. We use our experience with modern tools such as Playwright, Cypress, K6 and others to ensure reliability, performance and quality of your applications.
                     </p>
                 </div>
 
-                <div class="service-card group p-8 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
+                <div class="service-card group border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
                     <div class="w-12 h-12 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
                         <i data-lucide="book-open" class="w-8 h-8 text-cyan-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3" data-translate="services.items.2.title">Testing & Automation Training</h3>
+                    <h3 class="text-xl font-bold" data-translate="services.items.2.title">Testing & Automation Training</h3>
                     <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed" data-translate="services.items.2.desc">
                         We offer technical and general training in the field of software testing and automation. We provide training individually or in groups, tailored to your specific needs.
                     </p>
                 </div>
 
-                <div class="service-card group p-8 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
+                <div class="service-card group border border-zinc-200 dark:border-zinc-800 hover:border-cyan-400 transition duration-300 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer">
                     <div class="w-12 h-12 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
                         <i data-lucide="message-square" class="w-8 h-8 text-cyan-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3" data-translate="services.items.3.title">QA Consulting</h3>
+                    <h3 class="text-xl font-bold" data-translate="services.items.3.title">QA Consulting</h3>
                     <p class="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed" data-translate="services.items.3.desc">
                         We offer expert consulting aimed at improving software quality and testing process efficiency. We help identify weaknesses, optimize procedures and implement proven strategies to achieve higher reliability and performance of your applications.
                     </p>
