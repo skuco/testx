@@ -1,3 +1,13 @@
+.tech-card { width: 110px !important; height: 110px !important; }
+.tech-card img { width: 64px !important; height: 64px !important; }
+@media (min-width:768px){
+    .tech-card { width:128px !important; height:128px !important; }
+    .tech-card img { width:72px !important; height:72px !important; }
+}
+@media (max-width:480px){
+    .tech-card { width:84px !important; height:84px !important; }
+    .tech-card img { width:48px !important; height:48px !important; }
+}
 /* Reset and base styles */
 * {
     margin: 0;
@@ -325,9 +335,51 @@ section {
 
 /* Tech cards */
 .tech-card {
-    background-color: var(--bg-primary);
-    border: 1px solid var(--border-primary);
+    background: transparent;
+    border: none;
     transition: all 0.3s ease;
+}
+
+/* Tech stack horizontal row */
+.tech-stack-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.75rem, 2vw, 2rem);
+    margin-bottom: 2rem;
+    padding: 1.25rem clamp(0.75rem, 2vw, 2rem);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-primary);
+    border-radius: 14px;
+}
+
+.tech-stack-row::-webkit-scrollbar { height: 10px; }
+.tech-stack-row::-webkit-scrollbar-thumb { background: var(--border-primary); border-radius: 10px; }
+.tech-stack-row::-webkit-scrollbar-track { background: transparent; }
+
+.tech-card {
+    flex: 0 0 auto;
+    width: 82px;
+    height: 82px;
+    box-sizing: border-box;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+.tech-card img { width: 40px; height: 40px; }
+
+@media (min-width: 768px) {
+    .tech-card { width: 96px; height: 96px; }
+    .tech-card img { width: 48px; height: 48px; }
+}
+
+@media (max-width: 480px) {
+    .tech-card { width: 72px; height: 72px; }
+    .tech-card img { width: 34px; height: 34px; }
 }
 
 .tech-card:hover {
@@ -370,6 +422,51 @@ input, textarea {
     color: var(--text-primary);
     transition: border-color 0.3s ease;
 }
+
+/* Overrides: simplified tech stack UI */
+.tech-stack-row {
+        flex-wrap: nowrap !important; /* jeden riadok bez zalamovania */
+        gap: clamp(0.5rem, 1.5vw, 1.25rem) !important;
+        margin: 0 0 2.25rem 0 !important;
+        padding: 0.5rem !important;
+        background: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        overflow-x: auto !important; /* horizontálny scroll ak treba */
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+}
+
+.tech-card {
+        flex: 0 0 auto !important;
+        width: 140px !important;
+        height: 140px !important;
+        background: transparent !important;
+        border: none !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+}
+/* Ikony max veľkosť s enforced square aspect ratio */
+.tech-card img { 
+        width: 100px !important; 
+        height: 100px !important; 
+        object-fit: contain !important; 
+        aspect-ratio: 1 / 1 !important;
+}
+
+/* Inverzia farieb ikon v dark mode pre lepšiu viditeľnosť */
+html.dark .tech-card img {
+        filter: brightness(0) invert(1) !important;
+}
+
+@media (min-width:768px){
+    .tech-card { width:150px !important; height:150px !important; }
+}
+@media (max-width:640px){
+    .tech-card { width:110px !important; height:110px !important; }
+}
+.tech-card:hover { transform: scale(1.05) !important; }
 
 input:hover, textarea:hover {
     border-color: var(--color-cyan-400);
