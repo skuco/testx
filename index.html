@@ -25,9 +25,9 @@
     <meta property="twitter:image" content="https://testx.sk/images/og-image.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/svg+xml" href="/testx-logo.svg">
-    <link rel="apple-touch-icon" href="/testx-logo.svg">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/images/testx-logo.svg">
+    <link rel="apple-touch-icon" href="/images/testx-logo.svg">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +46,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center gap-3">
-                    <img src="/testx-logo.svg" alt="TESTX Logo" class="w-8 h-8 object-contain">
+                    <img src="/images/testx-logo.svg" alt="TESTX Logo" class="w-8 h-8 object-contain">
                     <span class="text-lg font-bold tracking-tight">TESTX</span>
                 </div>
 
@@ -96,10 +96,24 @@
                     </a>
                 </div>
                 <div class="hidden md:flex items-center justify-center">
-                    <div class="w-full aspect-square bg-gradient-to-br from-cyan-100 to-blue-100 dark:from-cyan-900 dark:to-blue-900 border border-cyan-200 dark:border-cyan-800 rounded-2xl flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="text-6xl mb-4 text-cyan-600">&lt;/</div>
-                            <p class="text-zinc-600 dark:text-zinc-400 font-mono text-sm">QA Testing Platform</p>
+                    <div class="w-full aspect-square bg-gradient-to-br from-cyan-100 to-blue-100 dark:from-cyan-900 dark:to-blue-900 border border-cyan-200 dark:border-cyan-800 rounded-2xl flex items-center justify-center p-12">
+                        <div class="grid grid-cols-2 gap-8 w-full">
+                            <div class="flex flex-col items-center justify-center p-6 bg-white/50 dark:bg-zinc-950/50 rounded-xl">
+                                <i data-lucide="check-circle" class="w-16 h-16 text-green-600 mb-2"></i>
+                                <span class="text-xs font-mono text-zinc-600 dark:text-zinc-400">Tests Pass</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center p-6 bg-white/50 dark:bg-zinc-950/50 rounded-xl">
+                                <i data-lucide="bug" class="w-16 h-16 text-red-600 mb-2"></i>
+                                <span class="text-xs font-mono text-zinc-600 dark:text-zinc-400">Bugs Found</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center p-6 bg-white/50 dark:bg-zinc-950/50 rounded-xl">
+                                <i data-lucide="code-2" class="w-16 h-16 text-cyan-600 mb-2"></i>
+                                <span class="text-xs font-mono text-zinc-600 dark:text-zinc-400">Automation</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center p-6 bg-white/50 dark:bg-zinc-950/50 rounded-xl">
+                                <i data-lucide="shield-check" class="w-16 h-16 text-blue-600 mb-2"></i>
+                                <span class="text-xs font-mono text-zinc-600 dark:text-zinc-400">Quality</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -170,32 +184,32 @@
             <div class="tech-stack-row">
                 <a href="https://playwright.dev" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center group">
                     <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
-                        <img src="icons/playwright_logo_icon_248827.svg" alt="Playwright" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 playwright-logo tech-logo">
+                        <img src="icons/playwright.svg" alt="Playwright" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 playwright-logo tech-logo">
                     </div>
                 </a>
                 <a href="https://www.cypress.io" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center group">
                     <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
-                        <img src="icons/cypress-svgrepo-com.svg" alt="Cypress" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 cypress-logo tech-logo">
+                        <img src="icons/cypress.svg" alt="Cypress" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 cypress-logo tech-logo">
                     </div>
                 </a>
                 <a href="https://k6.io" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center group">
                     <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
-                        <img src="icons/Simpleicons-Team-Simple-K6.svg" alt="K6" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 k6-logo tech-logo">
+                        <img src="icons/k6.svg" alt="K6" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 k6-logo tech-logo">
                     </div>
                 </a>
                 <a href="https://www.selenium.dev" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center group">
                     <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
-                        <img src="icons/selenium-svgrepo-com(1).svg" alt="Selenium" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 selenium-logo tech-logo">
+                        <img src="icons/selenium.svg" alt="Selenium" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 selenium-logo tech-logo">
                     </div>
                 </a>
                 <a href="https://robotframework.org" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center group">
                     <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
-                        <img src="icons/robotframework-svgrepo-com.svg" alt="Robot Framework" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 robot-logo tech-logo">
+                        <img src="icons/robot-framework.svg" alt="Robot Framework" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 robot-logo tech-logo">
                     </div>
                 </a>
                 <a href="https://jmeter.apache.org" target="_blank" rel="noopener noreferrer" class="tech-card flex items-center justify-center group">
                     <div class="text-cyan-600 group-hover:scale-110 transition duration-300">
-                        <img src="icons/apachejmeter-svgrepo-com.svg" alt="JMeter" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 jmeter-logo tech-logo">
+                        <img src="icons/jmeter.svg" alt="JMeter" class="object-contain filter brightness-110 hover:brightness-125 transition duration-300 jmeter-logo tech-logo">
                     </div>
                 </a>
             </div>
