@@ -424,6 +424,177 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// QA Animation - Hero Section Particles
+function createHeroParticles() {
+    const container = document.getElementById('heroParticles');
+    if (!container) return;
+    
+    const particleTypes = [
+        {
+            type: 'bug',
+            count: 3,
+            create: () => {
+                const bug = document.createElement('div');
+                bug.className = 'test-particle bug-particle';
+                bug.innerHTML = `
+                    <svg width="50" height="50" viewBox="0 0 80 80">
+                        <ellipse cx="40" cy="45" rx="18" ry="24" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
+                        <circle cx="40" cy="25" r="12" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
+                        <line x1="35" y1="18" x2="28" y2="8" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="45" y1="18" x2="52" y2="8" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="26" y1="40" x2="12" y2="35" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="24" y1="50" x2="10" y2="50" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="26" y1="60" x2="12" y2="65" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="54" y1="40" x2="68" y2="35" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="56" y1="50" x2="70" y2="50" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="54" y1="60" x2="68" y2="65" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                `;
+                return bug;
+            }
+        },
+        {
+            type: 'check',
+            count: 4,
+            create: () => {
+                const check = document.createElement('div');
+                check.className = 'test-particle check-particle';
+                check.innerHTML = `
+                    <svg width="55" height="55" viewBox="0 0 90 90">
+                        <circle cx="45" cy="45" r="40" fill="rgba(0,0,0,0.08)" opacity="0.8"/>
+                        <path d="M25 45 L38 58 L65 31" fill="none" stroke="rgba(0,0,0,0.4)" stroke-width="6" 
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                `;
+                return check;
+            }
+        },
+        {
+            type: 'chart',
+            count: 3,
+            create: () => {
+                const chart = document.createElement('div');
+                chart.className = 'test-particle chart-particle';
+                chart.innerHTML = `
+                    <svg width="60" height="60" viewBox="0 0 100 100">
+                        <rect x="10" y="58" width="16" height="28" fill="rgba(0,0,0,0.3)" opacity="0.6" rx="3"/>
+                        <rect x="32" y="48" width="16" height="38" fill="rgba(0,0,0,0.3)" opacity="0.6" rx="3"/>
+                        <rect x="54" y="35" width="16" height="51" fill="rgba(0,0,0,0.3)" opacity="0.6" rx="3"/>
+                        <rect x="76" y="22" width="16" height="64" fill="rgba(0,0,0,0.3)" opacity="0.6" rx="3"/>
+                    </svg>
+                `;
+                return chart;
+            }
+        },
+        {
+            type: 'doc',
+            count: 3,
+            create: () => {
+                const doc = document.createElement('div');
+                doc.className = 'test-particle doc-particle';
+                doc.innerHTML = `
+                    <svg width="55" height="55" viewBox="0 0 90 90">
+                        <rect x="15" y="8" width="50" height="70" fill="rgba(0,0,0,0.08)" opacity="0.8" rx="4"/>
+                        <rect x="15" y="8" width="50" height="70" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="3" rx="4"/>
+                        <line x1="23" y1="22" x2="57" y2="22" stroke="rgba(0,0,0,0.25)" stroke-width="3" opacity="0.6"/>
+                        <line x1="23" y1="35" x2="57" y2="35" stroke="rgba(0,0,0,0.25)" stroke-width="3" opacity="0.6"/>
+                        <line x1="23" y1="48" x2="48" y2="48" stroke="rgba(0,0,0,0.25)" stroke-width="3" opacity="0.6"/>
+                    </svg>
+                `;
+                return doc;
+            }
+        },
+        {
+            type: 'code',
+            count: 5,
+            create: () => {
+                const code = document.createElement('div');
+                code.className = 'test-particle code-particle';
+                const snippets = [
+                    'test()', 'assert', 'expect', 'verify', 'mock', 'debug',
+                    'pytest', 'cypress', 'jest', 'robot', 'api', 'e2e'
+                ];
+                code.textContent = snippets[Math.floor(Math.random() * snippets.length)];
+                return code;
+            }
+        },
+        {
+            type: 'gear',
+            count: 2,
+            create: () => {
+                const gear = document.createElement('div');
+                gear.className = 'test-particle';
+                gear.innerHTML = `
+                    <svg width="55" height="55" viewBox="0 0 90 90">
+                        <circle cx="45" cy="45" r="26" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="4" opacity="0.7"/>
+                        <circle cx="45" cy="45" r="12" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
+                        <rect x="41" y="12" width="8" height="14" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
+                        <rect x="41" y="64" width="8" height="14" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
+                        <rect x="12" y="41" width="14" height="8" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
+                        <rect x="64" y="41" width="14" height="8" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
+                    </svg>
+                `;
+                return gear;
+            }
+        }
+    ];
+    
+    particleTypes.forEach(particleType => {
+        for (let i = 0; i < particleType.count; i++) {
+            const particle = particleType.create();
+            
+            // Random spawn position across entire circular container
+            const startX = (Math.random() * 100) + '%';
+            const startY = (Math.random() * 100) + '%';
+            
+            // Random end position
+            const endX = (Math.random() * 100) + '%';
+            const endY = (Math.random() * 100) + '%';
+            
+            // Choose random movement pattern
+            const directions = ['float-vertical', 'float-horizontal', 'float-diagonal'];
+            const direction = directions[Math.floor(Math.random() * directions.length)];
+            
+            particle.classList.add(direction);
+            
+            // Set initial position
+            particle.style.left = startX;
+            particle.style.top = startY;
+            
+            if (direction === 'float-vertical') {
+                // Vertical movement with random drift
+                particle.style.setProperty('--drift', (Math.random() * 200 - 100) + 'px');
+                particle.style.setProperty('--start-y', startY);
+                particle.style.setProperty('--end-y', endY);
+            } else if (direction === 'float-horizontal') {
+                // Horizontal movement with vertical drift
+                particle.style.setProperty('--start-x', startX);
+                particle.style.setProperty('--end-x', endX);
+                particle.style.setProperty('--y-drift', (Math.random() * 100 - 50) + '%');
+            } else if (direction === 'float-diagonal') {
+                // Diagonal movement from start to end position
+                particle.style.setProperty('--start-x', startX);
+                particle.style.setProperty('--start-y', startY);
+                particle.style.setProperty('--end-x', endX);
+                particle.style.setProperty('--end-y', endY);
+                particle.style.setProperty('--rotate', (Math.random() * 720 - 360) + 'deg');
+            }
+            
+            // Random animation timing
+            particle.style.animationDelay = (Math.random() * 20) + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+            container.appendChild(particle);
+        }
+    });
+}
+
+// Initialize hero animation when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createHeroParticles);
+} else {
+    createHeroParticles();
+}
+
 // Export functions for potential use in other scripts
 window.TestXApp = {
     toggleTheme,

@@ -643,3 +643,150 @@ img:not([src]) {
         color: black !important;
     }
 }
+
+/* QA Animation Styles */
+.qa-animation-container {
+    position: relative;
+    background: white !important;
+}
+
+html.dark .qa-animation-container {
+    background: #09090b !important;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+html.dark .orbit {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.02); }
+}
+
+.orbit-1 { width: 150px; height: 150px; animation-delay: 0s; }
+.orbit-2 { width: 250px; height: 250px; animation-delay: 1s; }
+.orbit-3 { width: 350px; height: 350px; animation-delay: 2s; }
+.orbit-4 { width: 450px; height: 450px; animation-delay: 1.5s; }
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+    background: 
+        radial-gradient(circle at top left, rgba(250, 250, 250, 0.8) 0%, transparent 40%),
+        radial-gradient(circle at top right, rgba(250, 250, 250, 0.8) 0%, transparent 40%),
+        radial-gradient(circle at bottom left, rgba(250, 250, 250, 0.8) 0%, transparent 40%),
+        radial-gradient(circle at bottom right, rgba(250, 250, 250, 0.8) 0%, transparent 40%);
+}
+
+html.dark .fade-overlay {
+    background: 
+        radial-gradient(circle at top left, rgba(24, 24, 27, 0.8) 0%, transparent 40%),
+        radial-gradient(circle at top right, rgba(24, 24, 27, 0.8) 0%, transparent 40%),
+        radial-gradient(circle at bottom left, rgba(24, 24, 27, 0.8) 0%, transparent 40%),
+        radial-gradient(circle at bottom right, rgba(24, 24, 27, 0.8) 0%, transparent 40%);
+}
+
+.test-particle {
+    position: absolute;
+    opacity: 0;
+}
+
+.float-vertical {
+    animation: floatUp 20s linear infinite;
+}
+
+.float-horizontal {
+    animation: floatSide 25s linear infinite;
+}
+
+.float-diagonal {
+    animation: floatDiagonal 22s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { 
+        top: var(--start-y);
+        transform: translateX(var(--drift, 0px)) rotate(0deg); 
+        opacity: 0; 
+    }
+    5% { opacity: 0.4; }
+    95% { opacity: 0.4; }
+    100% { 
+        top: var(--end-y);
+        transform: translateX(var(--drift, 0px)) rotate(360deg); 
+        opacity: 0; 
+    }
+}
+
+@keyframes floatSide {
+    0% { 
+        left: var(--start-x);
+        transform: translateY(var(--y-drift, 0%)) rotate(0deg); 
+        opacity: 0; 
+    }
+    5% { opacity: 0.4; }
+    95% { opacity: 0.4; }
+    100% { 
+        left: var(--end-x);
+        transform: translateY(var(--y-drift, 0%)) rotate(360deg); 
+        opacity: 0; 
+    }
+}
+
+@keyframes floatDiagonal {
+    0% { 
+        left: var(--start-x);
+        top: var(--start-y);
+        transform: rotate(0deg); 
+        opacity: 0; 
+    }
+    5% { opacity: 0.4; }
+    95% { opacity: 0.4; }
+    100% { 
+        left: var(--end-x);
+        top: var(--end-y);
+        transform: rotate(var(--rotate)); 
+        opacity: 0; 
+    }
+}
+
+.bug-particle { width: 50px; height: 50px; }
+.check-particle { width: 55px; height: 55px; }
+.chart-particle { width: 60px; height: 60px; }
+.doc-particle { width: 55px; height: 55px; }
+.code-particle {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+html.dark .code-particle {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.5);
+}

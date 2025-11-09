@@ -96,25 +96,13 @@
                     </a>
                 </div>
                 <div class="hidden md:flex items-center justify-center">
-                    <div class="w-full aspect-square bg-gradient-to-br from-cyan-100 to-blue-100 dark:from-cyan-900 dark:to-blue-900 border border-cyan-200 dark:border-cyan-800 rounded-2xl flex items-center justify-center p-12">
-                        <div class="grid grid-cols-2 gap-8 w-full">
-                            <div class="flex flex-col items-center justify-center p-6 bg-white/50 dark:bg-zinc-950/50 rounded-xl">
-                                <i data-lucide="check-circle" class="w-16 h-16 text-green-600 mb-2"></i>
-                                <span class="text-xs font-mono text-zinc-600 dark:text-zinc-400">Tests Pass</span>
-                            </div>
-                            <div class="flex flex-col items-center justify-center p-6 bg-white/50 dark:bg-zinc-950/50 rounded-xl">
-                                <i data-lucide="bug" class="w-16 h-16 text-red-600 mb-2"></i>
-                                <span class="text-xs font-mono text-zinc-600 dark:text-zinc-400">Bugs Found</span>
-                            </div>
-                            <div class="flex flex-col items-center justify-center p-6 bg-white/50 dark:bg-zinc-950/50 rounded-xl">
-                                <i data-lucide="code-2" class="w-16 h-16 text-cyan-600 mb-2"></i>
-                                <span class="text-xs font-mono text-zinc-600 dark:text-zinc-400">Automation</span>
-                            </div>
-                            <div class="flex flex-col items-center justify-center p-6 bg-white/50 dark:bg-zinc-950/50 rounded-xl">
-                                <i data-lucide="shield-check" class="w-16 h-16 text-blue-600 mb-2"></i>
-                                <span class="text-xs font-mono text-zinc-600 dark:text-zinc-400">Quality</span>
-                            </div>
-                        </div>
+                    <div class="qa-animation-container w-full aspect-square rounded-2xl relative overflow-hidden">
+                        <div class="orbit orbit-1"></div>
+                        <div class="orbit orbit-2"></div>
+                        <div class="orbit orbit-3"></div>
+                        <div class="orbit orbit-4"></div>
+                        <div class="particles" id="heroParticles"></div>
+                        <div class="fade-overlay"></div>
                     </div>
                 </div>
             </div>
