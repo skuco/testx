@@ -1,0 +1,19 @@
+<svg width="450" height="580" viewBox="0 0 450 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Yellow rectangle at top (vertical part of cross) -->
+  <rect x="150" y="0" width="150" height="150" fill="#F1C40F"/>
+  
+  <!-- Green rectangle (horizontal part of cross) - doubled width for "t" shape -->
+  <rect x="150" y="150" width="300" height="150" fill="#2ECC71"/>
+  
+  <!-- Green circle on left, overlapping green rectangle -->
+  <circle cx="75" cy="225" r="75" fill="#2ECC71"/>
+  
+  <!-- Blue rectangle (continuing vertical part) -->
+  <rect x="150" y="300" width="150" height="150" fill="#3498DB"/>
+  
+  <!-- Purple section: 150x150 to match all other elements -->
+  <path d="M 150 430 L 300 430 L 300 580 L 225 580 Q 150 580 150 505 L 150 430 Z" fill="#9B59B6"/>
+  
+  <!-- Magenta circle bottom right -->
+  <circle cx="375" cy="505" r="75" fill="#E91E63"/>
+</svg>
