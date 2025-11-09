@@ -245,36 +245,6 @@ button {
     width: 100%;
 }
 
-/* Theme toggle */
-#theme-toggle, #mobile-theme-toggle {
-    padding: 0.5rem;
-    border: 1px solid var(--border-primary);
-    border-radius: 0.25rem;
-    transition: color 0.3s ease;
-}
-
-#theme-toggle:hover, #mobile-theme-toggle:hover {
-    color: var(--color-cyan-600);
-}
-
-/* Language toggle */
-#language-toggle, #mobile-language-toggle {
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--border-primary);
-    border-radius: 0.25rem;
-    transition: border-color 0.3s ease;
-}
-
-#language-toggle:hover, #mobile-language-toggle:hover {
-    border-color: var(--color-cyan-600);
-}
-
-#mobile-language-toggle {
-    padding: 0.25rem 0.5rem;
-}
-
 /* Sections */
 section {
     border-bottom: 1px solid var(--border-primary);
