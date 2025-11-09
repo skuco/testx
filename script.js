@@ -437,104 +437,126 @@ function createHeroParticles() {
                 const bug = document.createElement('div');
                 bug.className = 'test-particle bug-particle';
                 bug.innerHTML = `
-                    <svg width="50" height="50" viewBox="0 0 80 80">
-                        <ellipse cx="40" cy="45" rx="18" ry="24" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
-                        <circle cx="40" cy="25" r="12" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
-                        <line x1="35" y1="18" x2="28" y2="8" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="45" y1="18" x2="52" y2="8" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="26" y1="40" x2="12" y2="35" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="24" y1="50" x2="10" y2="50" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="26" y1="60" x2="12" y2="65" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="54" y1="40" x2="68" y2="35" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="56" y1="50" x2="70" y2="50" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
-                        <line x1="54" y1="60" x2="68" y2="65" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+                    <svg width="55" height="55" viewBox="0 0 80 80" class="particle-svg">
+                        <ellipse cx="40" cy="45" rx="18" ry="24" fill="currentColor" opacity="0.8"/>
+                        <circle cx="40" cy="25" r="12" fill="currentColor" opacity="0.8"/>
+                        <line x1="35" y1="18" x2="28" y2="8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+                        <line x1="45" y1="18" x2="52" y2="8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+                        <line x1="26" y1="40" x2="12" y2="35" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+                        <line x1="24" y1="50" x2="10" y2="50" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+                        <line x1="26" y1="60" x2="12" y2="65" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+                        <line x1="54" y1="40" x2="68" y2="35" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+                        <line x1="56" y1="50" x2="70" y2="50" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+                        <line x1="54" y1="60" x2="68" y2="65" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
                     </svg>
                 `;
                 return bug;
             }
         },
         {
-            type: 'check',
-            count: 4,
+            type: 'checkmark',
+            count: 3,
             create: () => {
                 const check = document.createElement('div');
                 check.className = 'test-particle check-particle';
                 check.innerHTML = `
-                    <svg width="55" height="55" viewBox="0 0 90 90">
-                        <circle cx="45" cy="45" r="40" fill="rgba(0,0,0,0.08)" opacity="0.8"/>
-                        <path d="M25 45 L38 58 L65 31" fill="none" stroke="rgba(0,0,0,0.4)" stroke-width="6" 
-                              stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg width="60" height="60" viewBox="0 0 90 90" class="particle-svg">
+                        <circle cx="45" cy="45" r="38" fill="none" stroke="currentColor" stroke-width="5" opacity="0.7"/>
+                        <path d="M25 45 L38 58 L65 31" fill="none" stroke="currentColor" stroke-width="6" 
+                              stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
                     </svg>
                 `;
                 return check;
             }
         },
         {
-            type: 'chart',
+            type: 'magnifier',
             count: 3,
             create: () => {
-                const chart = document.createElement('div');
-                chart.className = 'test-particle chart-particle';
-                chart.innerHTML = `
-                    <svg width="60" height="60" viewBox="0 0 100 100">
-                        <rect x="10" y="58" width="16" height="28" fill="rgba(0,0,0,0.3)" opacity="0.6" rx="3"/>
-                        <rect x="32" y="48" width="16" height="38" fill="rgba(0,0,0,0.3)" opacity="0.6" rx="3"/>
-                        <rect x="54" y="35" width="16" height="51" fill="rgba(0,0,0,0.3)" opacity="0.6" rx="3"/>
-                        <rect x="76" y="22" width="16" height="64" fill="rgba(0,0,0,0.3)" opacity="0.6" rx="3"/>
+                const magnifier = document.createElement('div');
+                magnifier.className = 'test-particle magnifier-particle';
+                magnifier.innerHTML = `
+                    <svg width="58" height="58" viewBox="0 0 100 100" class="particle-svg">
+                        <circle cx="40" cy="40" r="25" fill="none" stroke="currentColor" stroke-width="5" opacity="0.8"/>
+                        <line x1="58" y1="58" x2="80" y2="80" stroke="currentColor" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+                        <circle cx="40" cy="40" r="15" fill="none" stroke="currentColor" stroke-width="3" opacity="0.5"/>
                     </svg>
                 `;
-                return chart;
+                return magnifier;
             }
         },
         {
-            type: 'doc',
+            type: 'clipboard',
             count: 3,
             create: () => {
-                const doc = document.createElement('div');
-                doc.className = 'test-particle doc-particle';
-                doc.innerHTML = `
-                    <svg width="55" height="55" viewBox="0 0 90 90">
-                        <rect x="15" y="8" width="50" height="70" fill="rgba(0,0,0,0.08)" opacity="0.8" rx="4"/>
-                        <rect x="15" y="8" width="50" height="70" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="3" rx="4"/>
-                        <line x1="23" y1="22" x2="57" y2="22" stroke="rgba(0,0,0,0.25)" stroke-width="3" opacity="0.6"/>
-                        <line x1="23" y1="35" x2="57" y2="35" stroke="rgba(0,0,0,0.25)" stroke-width="3" opacity="0.6"/>
-                        <line x1="23" y1="48" x2="48" y2="48" stroke="rgba(0,0,0,0.25)" stroke-width="3" opacity="0.6"/>
+                const clipboard = document.createElement('div');
+                clipboard.className = 'test-particle clipboard-particle';
+                clipboard.innerHTML = `
+                    <svg width="56" height="56" viewBox="0 0 90 90" class="particle-svg">
+                        <rect x="20" y="15" width="50" height="65" fill="none" stroke="currentColor" stroke-width="4" rx="5" opacity="0.8"/>
+                        <rect x="32" y="10" width="26" height="12" fill="currentColor" opacity="0.7" rx="3"/>
+                        <line x1="30" y1="32" x2="60" y2="32" stroke="currentColor" stroke-width="3" opacity="0.6"/>
+                        <line x1="30" y1="45" x2="60" y2="45" stroke="currentColor" stroke-width="3" opacity="0.6"/>
+                        <line x1="30" y1="58" x2="50" y2="58" stroke="currentColor" stroke-width="3" opacity="0.6"/>
+                        <circle cx="30" cy="32" r="3" fill="currentColor" opacity="0.7"/>
+                        <circle cx="30" cy="45" r="3" fill="currentColor" opacity="0.7"/>
+                        <circle cx="30" cy="58" r="3" fill="currentColor" opacity="0.7"/>
                     </svg>
                 `;
-                return doc;
+                return clipboard;
             }
         },
         {
-            type: 'code',
-            count: 5,
-            create: () => {
-                const code = document.createElement('div');
-                code.className = 'test-particle code-particle';
-                const snippets = [
-                    'test()', 'assert', 'expect', 'verify', 'mock', 'debug',
-                    'pytest', 'cypress', 'jest', 'robot', 'api', 'e2e'
-                ];
-                code.textContent = snippets[Math.floor(Math.random() * snippets.length)];
-                return code;
-            }
-        },
-        {
-            type: 'gear',
+            type: 'flask',
             count: 2,
             create: () => {
-                const gear = document.createElement('div');
-                gear.className = 'test-particle';
-                gear.innerHTML = `
-                    <svg width="55" height="55" viewBox="0 0 90 90">
-                        <circle cx="45" cy="45" r="26" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="4" opacity="0.7"/>
-                        <circle cx="45" cy="45" r="12" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
-                        <rect x="41" y="12" width="8" height="14" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
-                        <rect x="41" y="64" width="8" height="14" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
-                        <rect x="12" y="41" width="14" height="8" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
-                        <rect x="64" y="41" width="14" height="8" fill="rgba(0,0,0,0.25)" opacity="0.7"/>
+                const flask = document.createElement('div');
+                flask.className = 'test-particle flask-particle';
+                flask.innerHTML = `
+                    <svg width="54" height="54" viewBox="0 0 90 90" class="particle-svg">
+                        <path d="M35 15 L35 35 L20 60 C18 63 18 70 20 72 L70 72 C72 70 72 63 70 60 L55 35 L55 15" 
+                              fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+                        <line x1="32" y1="15" x2="58" y2="15" stroke="currentColor" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+                        <circle cx="40" cy="55" r="4" fill="currentColor" opacity="0.6"/>
+                        <circle cx="50" cy="60" r="3" fill="currentColor" opacity="0.6"/>
+                        <circle cx="35" cy="48" r="3" fill="currentColor" opacity="0.6"/>
                     </svg>
                 `;
-                return gear;
+                return flask;
+            }
+        },
+        {
+            type: 'terminal',
+            count: 3,
+            create: () => {
+                const terminal = document.createElement('div');
+                terminal.className = 'test-particle terminal-particle';
+                terminal.innerHTML = `
+                    <svg width="62" height="62" viewBox="0 0 100 100" class="particle-svg">
+                        <rect x="10" y="20" width="80" height="60" fill="none" stroke="currentColor" stroke-width="4" rx="5" opacity="0.8"/>
+                        <path d="M20 35 L30 45 L20 55" fill="none" stroke="currentColor" stroke-width="4" 
+                              stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+                        <line x1="40" y1="52" x2="65" y2="52" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+                    </svg>
+                `;
+                return terminal;
+            }
+        },
+        {
+            type: 'target',
+            count: 2,
+            create: () => {
+                const target = document.createElement('div');
+                target.className = 'test-particle target-particle';
+                target.innerHTML = `
+                    <svg width="58" height="58" viewBox="0 0 100 100" class="particle-svg">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="4" opacity="0.7"/>
+                        <circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" stroke-width="4" opacity="0.7"/>
+                        <circle cx="50" cy="50" r="16" fill="none" stroke="currentColor" stroke-width="4" opacity="0.7"/>
+                        <circle cx="50" cy="50" r="6" fill="currentColor" opacity="0.8"/>
+                    </svg>
+                `;
+                return target;
             }
         }
     ];

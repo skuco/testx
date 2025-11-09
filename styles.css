@@ -742,21 +742,34 @@ html.dark .fade-overlay {
     }
 }
 
-.bug-particle { width: 50px; height: 50px; }
-.check-particle { width: 55px; height: 55px; }
-.chart-particle { width: 60px; height: 60px; }
-.doc-particle { width: 55px; height: 55px; }
+.bug-particle { width: 55px; height: 55px; }
+.check-particle { width: 60px; height: 60px; }
+.magnifier-particle { width: 58px; height: 58px; }
+.clipboard-particle { width: 56px; height: 56px; }
+.flask-particle { width: 54px; height: 54px; }
+.terminal-particle { width: 62px; height: 62px; }
+.target-particle { width: 58px; height: 58px; }
+
+/* Particle SVG color handling */
+.particle-svg {
+    color: rgba(0, 0, 0, 0.35);
+}
+
+html.dark .particle-svg {
+    color: rgba(255, 255, 255, 0.45);
+}
+
 .code-particle {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.06);
     padding: 10px 15px;
     border-radius: 8px;
     font-family: 'Courier New', monospace;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    font-weight: 500;
 }
 
 html.dark .code-particle {
-    background: rgba(255, 255, 255, 0.06);
-    color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.6);
 }
