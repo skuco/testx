@@ -1,104 +1,38 @@
-# TESTX Website 🧪
+# TESTX website
 
-Modern, responsive portfolio website for TESTX s.r.o. - Professional QA consulting and software testing services.
+Bilingual English/Slovak presentation site for TESTX s.r.o., specializing in QA consulting, software testing, automation and training.
 
-## ✨ Features
+## Development
 
-- **🎨 Modern UI**: Clean design with Tailwind CSS
-- **🌓 Dark/Light Mode**: Automatic theme switching
-- **🌍 Bilingual**: English/Slovak language toggle
-- **📱 Fully Responsive**: Mobile-first design
-- **� QA Animations**: Dynamic particle animations with testing-themed icons
-- **⚡ Fast & Lightweight**: Static HTML with minimal JavaScript
+Run `python3 -m http.server 3000`, then open http://localhost:3000.
 
-## 🛠️ Tech Stack
+No build step, package installation or third-party runtime is required. The site uses semantic HTML, CSS and vanilla JavaScript, with local SVG brand and tool assets and system fonts.
 
-- **HTML5** - Semantic markup
-- **Tailwind CSS** - Utility-first styling
-- **Vanilla JavaScript** - Theme & language switching
-- **Lucide Icons** - Icon library
-- **SVG Assets** - Local tool icons (Playwright, Cypress, K6, Selenium, Robot Framework, JMeter)
+## Features
 
-## 🚀 Quick Start
+- Responsive layouts and collapsible mobile navigation
+- English and Slovak copy, labels, form placeholders and document metadata
+- Persistent language and light/dark preferences (system theme on first visit)
+- Keyboard focus states, skip link and reduced-motion support
+- Contact form that prepares an encoded email draft in the visitor’s email app
 
-### Development
+The form does not send or store messages. Visitors review and send the draft from their email client; direct email and telephone links are also available.
 
-1. **Start local server**
-   ```bash
-   python3 -m http.server 3000
-   ```
+## Editing
 
-2. **Open browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+- `index.html`: static English content and page structure
+- `styles.css`: theme tokens, layout and responsive styles
+- `script.js`: English/Slovak translation dictionary and interactions
+- `images/`, `icons/`, `favicon.svg`: local assets
 
-### Deployment
+When changing copy, update the English HTML fallback and both entries in the `translations` dictionary. Translation keys are referenced by `data-translate` and `data-translate-placeholder`. Keep English and Slovak key sets identical.
 
-Deploy to GitHub Pages or any static hosting:
+Language is a client-side preference on one URL. The initial HTML and social preview metadata are English; JavaScript updates metadata for Slovak visitors. Separate language URLs would be needed for independently indexed language pages.
 
-1. **Build is ready** - No build step required
-2. **Upload files** to your hosting provider
-3. **Configure domain** in `CNAME` file
+## Deployment
 
-## 📁 Project Structure
+Publish the repository through the existing GitHub Pages configuration. Keep `CNAME` for the `testx.sk` custom domain. Asset paths are relative, so the page also supports GitHub Pages project subpaths. `robots.txt` and `sitemap.xml` describe the production domain.
 
-```
-testx/
-├── index.html           # Main HTML file
-├── styles.css          # Custom styles
-├── script.js           # Theme, language, animations
-├── favicon.svg         # Site favicon
-├── robots.txt          # SEO crawler rules
-├── sitemap.xml         # Site map
-├── icons/              # Tech stack SVG icons
-│   ├── playwright.svg
-│   ├── cypress.svg
-│   ├── k6.svg
-│   ├── selenium.svg
-│   ├── robot-framework.svg
-│   └── jmeter.svg
-└── images/             # Logos and assets
-    ├── testx-logo.svg
-    ├── favicon.svg
-    └── IMG_3335 copy Medium.jpeg
-```
+## Contact
 
-## � Key Features
-
-### QA Animation System
-Custom particle animation with QA-themed icons:
-- 🐛 Bugs - Testing defects
-- ✓ Checkmarks - Test passed
-- 🔍 Magnifier - Inspection testing
-- 📋 Clipboard - Test cases
-- 🧪 Flask - Testing/experimentation
-- 💻 Terminal - Automation
-- 🎯 Target - Test coverage
-
-### Theme System
-- Light/Dark mode toggle
-- Persistent theme via localStorage
-- Smooth transitions
-- Icon color adaptation
-
-### Language Toggle
-- English/Slovak support
-- Dynamic content switching
-- All sections translated
-
-## 🌐 SEO
-
-- Optimized meta tags
-- Open Graph support
-- Twitter Card integration
-- XML sitemap
-- Robots.txt configuration
-
-## � Contact
-
-**TESTX s.r.o.**
-- Email: testx.skuci@gmail.com
-- Website: https://testx.sk
-
----
-
-**Vibe-coded with ❤️ Powered by GitHub Pages 🤖**
+TESTX s.r.o. · testx.skuci@gmail.com · +421 949 184 534
